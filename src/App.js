@@ -48,11 +48,27 @@ const App = () => {
         }))
 
         resetTurns();
+        resetTurns();
+        resetTurns();
       }, 1800);
     }
   }
   
   const setFlippedCard = (id, flipped) => {
+    setCards(cards.map(card => {
+      if (card.id !== id) return card
+      return { ...card, flipped }
+    }))
+  }
+
+  const setFlippedCard1 = (id, flipped) => {
+    setCards(cards.map(card => {
+      if (card.id !== id) return card
+      return { ...card, flipped }
+    }))
+  }
+
+  const setFlippedCard2 = (id, flipped) => {
     setCards(cards.map(card => {
       if (card.id !== id) return card
       return { ...card, flipped }
